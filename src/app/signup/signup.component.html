@@ -1,0 +1,11 @@
+<div>
+    <h2>Signup</h2>
+    <form (submit)="signup()">
+      <input type="text" [(ngModel)]="username" placeholder="Username" name="username" required />
+      <input type="password" [(ngModel)]="password" placeholder="Password" name="password" required />
+      <button type="submit">Signup</button>
+    </form>
+    <p *ngIf="signupFailed">Username already exists. Please try a different one.</p>
+    <p *ngIf="signupSuccess">Signup successful! Redirecting to login...</p>
+  </div>
+  

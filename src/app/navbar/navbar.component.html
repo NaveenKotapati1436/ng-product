@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="navbar-logo">
+      <a routerLink="/">MyApp</a> 
+    </div>
+    <div class="navbar-links">
+      <ul>
+        <li *ngIf="!isLoggedIn"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/vault">Vault</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/transaction">Transactions</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/goals">Goals</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  
